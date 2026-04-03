@@ -60,7 +60,7 @@ export default function PostCard({ post, refresh, darkMode }) {
           {/* 🔥 IMAGE */}
           {post.image && (
             <img
-              src={`http://localhost:5000/${post.image}`}
+              src={`https://socialapp-3-ah53.onrender.com/${post.image}`}
               alt=""
               style={{
                 width: "100%",
