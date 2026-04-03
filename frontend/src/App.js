@@ -14,7 +14,8 @@ function App() {
         {/* 🔐 NOT LOGGED IN */}
         {!token && (
           <>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Signup />} />   {/* 👈 FIX */}
+            <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="*" element={<Navigate to="/" />} />
           </>

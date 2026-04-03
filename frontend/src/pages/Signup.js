@@ -12,7 +12,7 @@ export default function Signup() {
     try {
       await API.post("/auth/signup", data);
       alert("Signup successful");
-      window.location.href = "/";
+      window.location.href = "/login";  // 👈 FIX
     } catch {
       alert("Error in signup");
     }
@@ -32,6 +32,11 @@ export default function Signup() {
         onChange={(e)=>setData({...data,password:e.target.value})} />
 
       <button onClick={handleSignup}>Signup</button>
+
+      {/* 👇 ADD */}
+      <p onClick={() => window.location.href = "/login"} style={{cursor: "pointer"}}>
+        Already have an account? Login
+      </p>
     </div>
   );
 }

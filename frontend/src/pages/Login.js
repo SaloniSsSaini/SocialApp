@@ -28,6 +28,11 @@ export default function Login() {
         onChange={(e)=>setData({...data,password:e.target.value})} />
 
       <button onClick={handleLogin}>Login</button>
+
+      {/* 👇 ADD */}
+      <p onClick={() => window.location.href = "/signup"} style={{cursor: "pointer"}}>
+        Don't have an account? Signup
+      </p>
     </div>
   );
 }
